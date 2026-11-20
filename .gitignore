@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+data/samples/*
+data/clean_files/*
+data/dynamic_logs/*
+!data/**/.gitkeep
+logs/*
+reports/*
+!logs/.gitkeep
+!reports/.gitkeep
+models/*.gguf
+models/tokenizer/tokenizer.json
+outputs/

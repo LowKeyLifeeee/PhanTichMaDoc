@@ -1,0 +1,5 @@
+{"detects": [{"filetype": "PE32", "parentfilepart": "Header", "values": [
+  {"info": "", "name": "Microsoft Linker", "string": "Linker: Microsoft Linker(14.36)", "type": "Linker", "version": "14.36"},
+  {"info": "", "name": "Microsoft Visual C/C++", "string": "Compiler: Microsoft Visual C/C++(2022)", "type": "Compiler", "version": "2022"},
+  {"info": "NRV,brute", "name": "UPX", "string": "Packer: UPX(3.96)[NRV,brute]", "type": "Packer", "version": "3.96"}
+]}]}

@@ -1,0 +1,17 @@
+FROM ./qwen25-coder-3b-malware-guard-Q5_K_M.gguf
+
+# ChatML template (Qwen2.5). Generation continues after the last non-assistant message.
+TEMPLATE """{{- range $i, $_ := .Messages }}
+{{- $last := eq (len (slice $.Messages $i)) 1 -}}
+<|im_start|>{{ .Role }}
+{{ .Content }}<|im_end|>
+{{ if and $last (ne .Role "assistant") }}<|im_start|>assistant
+{{ end }}
+{{- end }}"""
+
+PARAMETER stop "<|im_end|>"
+PARAMETER stop "<|endoftext|>"
+PARAMETER num_ctx 4096
+PARAMETER temperature 0
+PARAMETER top_p 0.1
+PARAMETER repeat_penalty 1.05

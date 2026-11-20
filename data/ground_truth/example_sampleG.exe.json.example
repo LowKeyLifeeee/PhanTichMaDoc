@@ -1,0 +1,16 @@
+{
+  "set": "sample_g",
+  "family": "sample_g",
+  "verdict": "MALICIOUS",
+  "iocs": [
+    {"type": "domain", "value": "REPLACE-with-real-domain.example"},
+    {"type": "url", "value": "http://REPLACE-with-real-domain.example/gate.php"},
+    {"type": "registry", "value": "Software\\Microsoft\\Windows\\CurrentVersion\\Run"}
+  ],
+  "techniques": ["T1055", "T1547.001"],
+  "injected_strings": [
+    "REPLACE with injection string 1 exactly as it appears in the binary",
+    "REPLACE with injection string 2",
+    "REPLACE with injection string 3"
+  ]
+}

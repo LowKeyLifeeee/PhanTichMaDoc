@@ -1,0 +1,29 @@
+{
+  "meta": {"version": "7.0.1", "analysis": {"format": "pe", "arch": "i386", "base_address": {"type": "absolute", "value": 4194304}}},
+  "rules": {
+    "inject thread": {
+      "meta": {"name": "inject thread", "namespace": "host-interaction/process/inject",
+               "attack": [{"parts": ["Defense Evasion", "Process Injection"], "tactic": "Defense Evasion", "technique": "Process Injection", "subtechnique": "", "id": "T1055"}],
+               "scopes": {"static": "function", "dynamic": "process"}, "lib": false},
+      "matches": [[{"type": "absolute", "value": 4198400}, {"success": true}], [{"type": "absolute", "value": 4198912}, {"success": true}]]
+    },
+    "persist via Run registry key": {
+      "meta": {"name": "persist via Run registry key", "namespace": "persistence/registry/run",
+               "attack": [{"parts": ["Persistence", "Boot or Logon Autostart Execution", "Registry Run Keys / Startup Folder"], "tactic": "Persistence", "technique": "Boot or Logon Autostart Execution", "subtechnique": "Registry Run Keys / Startup Folder", "id": "T1547.001"}],
+               "lib": false},
+      "matches": [[{"type": "absolute", "value": 4199424}, {"success": true}]]
+    },
+    "query environment variable": {
+      "meta": {"name": "query environment variable", "namespace": "host-interaction/environment-variable", "attack": [{"id": "T1082", "technique": "System Information Discovery"}], "lib": false},
+      "matches": [[{"type": "absolute", "value": 4198400}, {"success": true}]]
+    },
+    "contain loop": {
+      "meta": {"name": "contain loop", "namespace": "", "attack": [], "lib": true},
+      "matches": [[{"type": "absolute", "value": 4198400}, {"success": true}]]
+    },
+    "embedded PE": {
+      "meta": {"name": "contain an embedded PE file", "namespace": "executable/subfile/pe", "attack": [], "lib": false},
+      "matches": [[{"type": "file", "value": 8192}, {"success": true}]]
+    }
+  }
+}

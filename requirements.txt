@@ -1,0 +1,9 @@
+# Agent runtime (runs inside the analysis VM)
+pefile>=2023.2.7
+yara-python>=4.5
+pydantic>=2.5
+requests>=2.31
+psutil>=5.9
+nvidia-ml-py>=12.535   # provides the `pynvml` module
+tokenizers>=0.15
+pytest>=8.0

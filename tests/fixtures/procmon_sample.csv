@@ -1,0 +1,8 @@
+"Time of Day","Process Name","PID","Operation","Path","Result","Detail"
+"10:00:00.0000000","sample.exe","4100","RegSetValue","HKCU\Software\Microsoft\Windows\CurrentVersion\Run\Updater","SUCCESS","Type: REG_SZ, Length: 60, Data: C:\Users\lab\AppData\Roaming\updater.exe"
+"10:00:00.1000000","sample.exe","4100","CreateFile","C:\Users\lab\AppData\Roaming\updater.exe","SUCCESS","Desired Access: Generic Write, Disposition: OverwriteIf, Options: , OpenResult: Created"
+"10:00:00.2000000","sample.exe","4100","WriteFile","C:\Users\lab\AppData\Roaming\updater.exe","SUCCESS","Offset: 0, Length: 22016"
+"10:00:00.3000000","sample.exe","4100","Process Create","C:\Windows\System32\cmd.exe","SUCCESS","PID: 4200, Command line: cmd.exe /c del C:\Users\lab\Desktop\sample.exe"
+"10:00:00.4000000","cmd.exe","4200","SetDispositionInformationFile","C:\Users\lab\Desktop\sample.exe","SUCCESS","Delete: True"
+"10:00:00.5000000","explorer.exe","1200","RegSetValue","HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs","SUCCESS","Type: REG_BINARY"
+"10:00:00.6000000","sample.exe","4100","RegSetValue","HKCU\Software\Classes\foo","ACCESS DENIED",""
