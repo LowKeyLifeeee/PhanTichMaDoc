@@ -10,3 +10,4 @@ Return to the matching README section when you:
 - change behaviour: section 9 (contribution rules), then the specs in `openspec/changes/add-malware-react-agent/`
 - hit a tool, Ghidra or token-budget error: section 10 (known errors)
 - add an environment variable: `docs/setup.md`
+- pick up the next piece of work: `NEXT_STEPS.md`

@@ -76,6 +76,7 @@ Agent phân tích mã độc tự chủ theo vòng lặp ReAct (`Thought -> Acti
 
 ```
 AGENTS.md, CLAUDE.md            trỏ AI agent về README này (agent tự đọc 2 file này khi mở repo)
+NEXT_STEPS.md                   việc cần làm tiếp và cải tiến đề xuất
 src/tools/malware_tools.py      wrapper pefile, FLOSS, DIE, capa, YARA, Ghidra, Procmon, INetSim; đếm token
 src/guardrails/defense.py       schema Pydantic, scanner injection, spotlight, grounding, khoá kết luận
 src/agent/agent_react.py        vòng ReAct, client Ollama, ngân sách context, YARA, audit log, CLI
@@ -211,6 +212,7 @@ Benchmark chạy tiếp được từ chỗ dừng; thêm `--fresh` để chạy
 ## 8. Trạng thái hiện tại
 
 Tiến độ theo [tasks.md](openspec/changes/add-malware-react-agent/tasks.md): **46/54 task xong**, 124 test qua.
+Các việc cần làm tiếp (cách làm, điều kiện cần, cải tiến đề xuất) nằm ở **[NEXT_STEPS.md](NEXT_STEPS.md)**.
 
 Đã kiểm tra với tool thật (trên host, file lành `python.exe`): FLOSS 3.2, capa 10.0, DIE 4.0, Ghidra 12.2, Ollama với `qwen2.5:3b-instruct` và `llama3.2:3b`. Một vòng đủ tool mất khoảng 200 giây (FLOSS ~87 giây, capa ~62 giây). RAM tool khoảng 1,2 GB, VRAM model khoảng 2 GB.
 
